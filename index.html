@@ -53,7 +53,7 @@
 
     /* ── Phone Image ── */
     .phone-image {
-      margin: -40px auto 8px;
+      margin: 0 auto 8px;
       max-width: 360px;
       width: 100%;
     }
@@ -62,15 +62,16 @@
       width: 100%;
       height: auto;
       display: block;
-      transform: translateX(38px);
+      object-fit: contain;
     }
 
     /* ── CTA Buttons ── */
     .cta-buttons {
       display: flex;
       gap: 16px;
-      margin: -86px 0 16px;
-      transform: translateX(20px);
+      margin: 16px 0;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .cta-btn {
@@ -105,17 +106,19 @@
 
     .footer-logo-img {
       width: 330px;
+      max-width: 100%;
       height: auto;
       display: block;
       margin: 0 auto;
-      transform: translateX(20px);
     }
 
     /* ── Responsive ── */
     @media (max-width: 400px) {
       .header .welcome { font-size: 1.2rem; }
-      .phone-image { max-width: 300px; }
+      .phone-image { max-width: 100%; padding: 0 16px; }
+      .cta-buttons { gap: 12px; }
       .cta-btn { padding: 10px 18px; font-size: 0.82rem; }
+      .footer-logo-img { width: 100%; max-width: 280px; }
     }
   </style>
 </head>
